@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>app02首页</title>
+</head>
+<body>
+{% if username %}
+    <p>
+        欢迎尊敬的贵宾{{ username }}回来 <a href="{% url 'App02:logout' %}">退出登录</a>
+    </p>
+{% else %}
+    <p>
+        你还没有登录，请先<a href="{% url 'App02:login' %}">登录</a>
+    </p>
+{% endif %}
+</body>
+</html>
